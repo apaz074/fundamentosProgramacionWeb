@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es-CR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sección Virtual 3</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="layou">
+    <header class="header">
+        <h1>App Registro de Desarrolladores</h1>
+        <nav class="nav">
+            <a href="#registrar-desarrollador">Registrar Desarrollador</a>
+            <a href="#desarrollador-por-provincia">Lista de Desarrolladores por Provincia</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="registrar-desarrollador">
+            <header>
+                <h1>Registrar Desarrollador</h1>
+                <p>Ingrese los datos del desarrollador:</p>
+            </header>
+
+            <form action="#" id="formRegistrar" class="form">
+
+                <fieldset>
+                    <legend>Nombre Completo</legend>
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" required>
+        
+                        <label>
+                            Primer apellido:
+                            <input type="text" required>
+                        </label>
+        
+                        <label>
+                            Segundo apellido:
+                            <input type="text" required>
+                        </label>
+                </fieldset>
+                
+                <fieldset class="column">
+                    <legend>Datos Personales</legend>
+                    <label>
+                        Fecha de nacimiento:
+                        <input type="date" id="fechaNacimiento" required>
+                    </label>
+                    <label>
+                        Edad:
+                        <input type="number" id="edad" required>
+                    </label>
+                    <label>
+                        Sexo:
+                        <input id="masculino" type="radio" value="Masculino" name="sexo" required> Masculino
+                        <input id="femenino" type="radio" value="Femenino" name="sexo" required> Femenino
+                        <input id="otros" type="radio" value="Otros" name="sexo" required> Otros
+                    </label>
+                    <label>
+                        Provincia en al que vive actualmente:
+                        <select  id="provincia" required>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Área de enfoque</legend>
+                    <label>
+                        <input type="checkbox" name="frontEnd"> Front-end
+                    </label>
+                    <label>
+                        <input type="checkbox" name="backEnd"> Back-end
+                    </label>
+                    <label>
+                        <input type="checkbox" name="dba"> Administrador de Base de Datos (DBA)
+                    </label>                                    
+                </fieldset>
+
+                <div>
+                    <input type="submit" value="Guardar">
+                    <input type="reset" value="Cancelar">
+                </div>
+            </form>
+        </section>
+
+        <section id="desarrollador-por-provincia">
+
+            <header>
+                <h1>Desarrollador por Provincia</h1>
+                <p>Seleccione la provincia:</p>
+                <p>Puede seleccionar más de una provincia.</p>
+            </header>
+
+            <form action="#" id="formTabla" class="form">
+                <fieldset id="checkProvincias"></fieldset>
+            </form>
+
+            <table id="tabla" class="table">
+    
+                <caption class="title">Datos de los desarrolladores</caption>
+
+                <thead>          
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Sexo</th>
+                        <th>Edad</th>
+                        <th>Fecha de Nacimiento</th>
+                        <th>Áreas</th>
+                        <th>Provincia</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tbody">
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+        <p>Ejemplo para el curso de Fundamentos de Programación Web</p>
+        <p>Código: 03075</p>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
